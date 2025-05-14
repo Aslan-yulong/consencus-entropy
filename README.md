@@ -7,6 +7,8 @@
 
 A Python library for calculating consensus entropy between multiple strings, particularly useful for OCR result analysis. Uses Levenshtein distance to calculate string differences.
 
+This library is the official implementation of our paper: [Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR](https://arxiv.org/abs/2504.11101)
+
 ### Citation
 
 If you use this library in your research, please cite our paper:
@@ -95,6 +97,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 中文
 
 一个用于计算多个字符串之间共识熵的Python库，特别适用于OCR结果分析。使用Levenshtein距离来计算字符串之间的差异。
+
+本库是我们论文的官方实现：[Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR](https://arxiv.org/abs/2504.11101)
 
 ### 引用
 
