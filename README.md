@@ -5,7 +5,7 @@
 <a name="english"></a>
 ## English
 
-A Python library for calculating consensus entropy between multiple strings, particularly useful for OCR result analysis. Uses Levenshtein distance to calculate string differences.
+A Python library for calculating consensus entropy between multiple strings, particularly useful for OCR result analysis.
 
 This library is the official implementation of our paper: [Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR](https://arxiv.org/abs/2504.11101)
 
@@ -47,7 +47,7 @@ ocr_results = [
 
 # Calculate entropy values for each result
 entropy_values = calculate_consensus_entropy(ocr_results, task_type="ocr")
-print(entropy_values)  # [0.1667, 0.3333, 0.3333]
+print([f"{v:.4f}" for v in entropy_values])  # ['0.0909', '0.1364', '0.1364']
 ```
 
 #### Get Best OCR Result
@@ -59,12 +59,12 @@ from consensus_entropy import get_best_ocr_result
 ocr_results = ["Test1", "Test2", "Text2"]
 best_result, best_entropy = get_best_ocr_result(ocr_results, task_type="ocr")
 print(f"Best result: {best_result}")
-print(f"Entropy: {best_entropy:.4f}")
+print(f"Entropy: {best_entropy:.4f}")  # Entropy: 0.0909
 ```
 
 ### Features
 
-- Calculate normalized Levenshtein distance
+- Calculate normalized string differences
 - Compute consensus entropy for multiple strings
 - Get the best OCR result with lowest entropy
 - Support for both English and Chinese text
@@ -96,7 +96,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 <a name="chinese"></a>
 ## 中文
 
-一个用于计算多个字符串之间共识熵的Python库，特别适用于OCR结果分析。使用Levenshtein距离来计算字符串之间的差异。
+一个用于计算多个字符串之间共识熵的Python库，特别适用于OCR结果分析。
 
 本库是我们论文的官方实现：[Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR](https://arxiv.org/abs/2504.11101)
 
@@ -139,7 +139,7 @@ ocr_results = [
 
 # 计算每个结果的熵值
 entropy_values = calculate_consensus_entropy(ocr_results, task_type="ocr")
-print(entropy_values)  # [0.1667, 0.2500, 0.1667, 0.2500]
+print([f"{v:.4f}" for v in entropy_values])  # ['0.1667', '0.2500', '0.1667', '0.2500']
 ```
 
 #### 获取最佳OCR结果
@@ -151,12 +151,12 @@ from consensus_entropy import get_best_ocr_result
 ocr_results = ["测试文本1", "测试文本2", "文本2"]
 best_result, best_entropy = get_best_ocr_result(ocr_results, task_type="ocr")
 print(f"最佳结果: {best_result}")
-print(f"熵值: {best_entropy:.4f}")
+print(f"熵值: {best_entropy:.4f}")  # 熵值: 0.1667
 ```
 
 ### 功能特点
 
-- 计算标准化Levenshtein距离
+- 计算标准化字符串差异
 - 计算多个OCR结果的共识熵
 - 获取熵值最低的最佳OCR结果
 - 支持中文和英文文本
